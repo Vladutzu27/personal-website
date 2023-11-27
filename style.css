@@ -1,0 +1,44 @@
+body {
+width: 100%;
+  height: 1000px;
+  margin: 0;
+  background: #000;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background: #FFF;
+  position: fixed;
+  top: -60px;
+  opacity: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+span {
+  position: fixed;
+  top: 100px;
+}
+
+img {
+  height: 200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #FFF;
+  font-family: sans-serif;
+}
+
+/* Apply the animation with a 5-second delay */
+.delayed-div {
+  animation: fadeIn 1s ease 5s; /* 5s delay before the animation starts */
+}
+.scroll-triggered-div {
+  display: none;
+  margin-top: 300px;
+  animation: fadeIn 1s ease; 
+}
