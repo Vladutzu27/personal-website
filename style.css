@@ -32,10 +32,8 @@ h1, h2, h3, h4, h5, h6, p {
   color: #FFF;
   font-family: sans-serif;
 }
-
-/* Apply the animation with a 5-second delay */
 .delayed-div {
-  animation: fadeIn 1s ease 5s; /* 5s delay before the animation starts */
+  animation: fadeIn 1s ease 5s;
 }
 .scroll-triggered-div {
   display: none;
