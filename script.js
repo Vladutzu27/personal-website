@@ -2,7 +2,7 @@ window.onload = function () {
     // Function to check the width and redirect if necessary
     function checkWidthAndRedirect() {
       // Set the width threshold for mobile devices (adjust as needed)
-      var mobileWidthThreshold = 600;
+      var mobileWidthThreshold = 1000;
 
       // Get the current window width
       var windowWidth =
