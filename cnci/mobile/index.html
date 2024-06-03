@@ -1,8 +1,5 @@
-
 <html>
     <head>
-        <link rel="icon" type="image/x-icon" href="logo.png">
-        <title>Colegiul Național Carol I</title>
         <style>
             *{
                 font-family: Arial, Helvetica, sans-serif;
@@ -12,19 +9,23 @@
                 background-size: cover;
             }
             #logo{
-                margin-top: 20px;
-                margin-left: 20px;
+                margin: 20px;
+                flex: 0 0 200px; /* Ensures the logo maintains a consistent size */
+            }
+            #logoo{
+                width: 200px;
+                height: 200px;
             }
             .titlul{
                 color: white;
-                font-size: 98px;
+                font-size: 100px;
                 font-weight: 900;
             }
             .optiuni{
                 color: white;
                 text-decoration: none;
-                margin-top: 55px;
-                font-size: 30px;
+                margin: 10px;
+                font-size: 60px;
                 font-weight: 100;
             }
             .optiuni:hover{
@@ -32,18 +33,28 @@
             }
             .barasus{
                 display: flex;
-                justify-content: space-between;
-                padding-right: 70px;
+                padding: 20px 70px;
                 background-color: rgba(0, 0, 0, 0.6);
-                padding-bottom: 20px;
                 border-radius: 20px;
+                align-items: center; /* Align items vertically centered */
+            }
+            .menu-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                width: 100%;
+            }
+            .menu-item {
+                flex: 0 0 45%; /* Make items take up about 45% of the width */
+                text-align: center;
+                margin: 10px 0;
             }
             #info{
                 color: white;
-                font-size: 30px;
-                font-family: consolas;
-                margin-left: 140px;
-                margin-right: 140px;
+                font-size: 60px;
+                font-family: monospace;
+                margin-left: 40px;
+                margin-right: 40px;
                 margin-top: 40px;
             }
         </style>
@@ -57,12 +68,14 @@
     <body>
         <div class="barasus">
             <div id="logo">
-                <a href="index.html"><img src="logo.png" alt="CNCI logo"></a>
+                <a href="index.html"><img id="logoo" src="logo.png" alt="CNCI logo"></a>
             </div>
-            <a class="optiuni" href="https://www.admitereliceu.ro/institutie/colegiul-national-carol-i-craiova">Admitere</a>
-            <a class="optiuni" href="despre.html">Despre</a>
-            <a class="optiuni" onclick="copiaza()">Server Minecraft</a>
-            <a class="optiuni" href="https://discord.gg/3mnczHby">Discord</a>
+            <div class="menu-container">
+                <a class="optiuni menu-item" href="https://www.admitereliceu.ro/institutie/colegiul-national-carol-i-craiova">Admitere</a>
+                <a class="optiuni menu-item" href="despre.html">Despre</a>
+                <a class="optiuni menu-item" onclick="copiaza()">Server Minecraft</a>
+                <a class="optiuni menu-item" href="https://discord.gg/3mnczHby"><br> Discord</a>
+            </div>
         </div>
         <center><h1 class="titlul">Colegiul Național Carol I</h1>
         <p id="info">Colegiul Național „Carol I”, înființată ca Școala Centrală din Craiova, este o instituție de învățământ preuniversitar din Craiova, România. Din 1947 până în 1997 s-a numit Liceul „Nicolae Bălcescu” din Craiova.</p></center>
@@ -74,21 +87,6 @@
             copyText.select();
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
-        }
-        window.onload = function () {
-            function checkWidthAndRedirect() {
-              var mobileWidthThreshold = 1000;
-              var windowWidth =
-                window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
-            
-              if (windowWidth < mobileWidthThreshold) {
-                window.location.href = 'mobile.html';
-              }
-            }
-        
-            checkWidthAndRedirect();
         }
     </script>
     </body>
