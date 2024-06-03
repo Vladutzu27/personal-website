@@ -1,0 +1,78 @@
+
+<html>
+    <head>
+        <style>
+            *{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body{
+                background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(https://live.staticflickr.com/5812/30080372982_4cc3f6180b_b.jpg);
+                background-size: cover;
+            }
+            #logo{
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            .titlul{
+                color: white;
+                font-size: 98px;
+                font-weight: 900;
+            }
+            .optiuni{
+                color: white;
+                text-decoration: none;
+                margin-top: 55px;
+                font-size: 30px;
+                font-weight: 100;
+            }
+            .optiuni:hover{
+                text-decoration: underline;
+            }
+            .barasus{
+                display: flex;
+                justify-content: space-between;
+                padding-right: 70px;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding-bottom: 20px;
+                border-radius: 20px;
+            }
+            #info{
+                color: white;
+                font-size: 30px;
+                font-family: consolas;
+                margin-left: 140px;
+                margin-right: 140px;
+                margin-top: 40px;
+            }
+        </style>
+        <script>
+
+        </script>
+        <title>
+            Colegiul National Carol I
+        </title>
+    </head>
+    <body>
+        <div class="barasus">
+            <div id="logo">
+                <a href="index.html"><img src="logo.png" alt="CNCI logo"></a>
+            </div>
+            <a class="optiuni" href="https://www.admitereliceu.ro/institutie/colegiul-national-carol-i-craiova">Admitere</a>
+            <a class="optiuni" href="despre.html">Despre</a>
+            <a class="optiuni" onclick="copiaza()">Server Minecraft</a>
+            <a class="optiuni" href="https://discord.gg/3mnczHby">Discord</a>
+        </div>
+        <center><h1 class="titlul">Colegiul Național Carol I</h1>
+        <p id="info">Colegiul Național „Carol I”, înființată ca Școala Centrală din Craiova, este o instituție de învățământ preuniversitar din Craiova, România. Din 1947 până în 1997 s-a numit Liceul „Nicolae Bălcescu” din Craiova.</p></center>
+    <script>
+        function copiaza()
+        {
+            console.log("atata sa putut")
+            var copyText = document.getElementById("exemplu");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+    </script>
+    </body>
+</html>
