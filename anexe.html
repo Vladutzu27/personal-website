@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+            *{
+                font-family: consolas;
+            }
+            body{
+                background-color: black;
+            }
+            input{
+                color: rgb(77, 255, 0);
+                background-color: black;
+                border-radius: none;
+                border: 1px white solid;
+                font-size: 70;
+                caret-shape: underscore;
+            }
+            button{
+                border-radius: none;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                color: rgb(77, 255, 0);
+                margin-top: 40px;
+                font-size: 30px;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+            p{
+                margin-top: 10%;
+                font-size: 40px;
+                color: rgb(77, 255, 0);
+            }
+            h1{
+                margin: 20px;
+                font-size: 40px;
+                color: rgb(77, 255, 0);
+            }
+            h1:hover{
+                cursor: pointer;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+        <script>
+            function baga()
+            {
+                var anexa = document.getElementById('anexa').value;
+                window.open(anexa + ".html","_self")
+            }
+        </script>
+        <title></title>
+    </head>
+    <body>
+        <a href="index.html"><h1>[ DIRIDAM ]</h1></a>
+        <center>
+            <p>Introdu numele anexei:</p>
+            <input type="text" name="anexa" id="anexa">
+            <br>
+            <button onclick="baga()">[ Bagă ]</button>
+        </center>
+    </body>
+</html>
