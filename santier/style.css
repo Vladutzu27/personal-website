@@ -2,16 +2,22 @@ body {
   width: 100%;
   height: 1000px;
   margin: 0;
-  background: #000;
+  background: linear-gradient( 45deg, rgb(8, 6, 21), #000, rgb(8, 6, 21));
 }
 
 *{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
 .ancore{
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  font-family: "Exo 2", sans-serif;
+  font-size: 40px;
+  margin: auto;
 }
 
 .ancore:hover{
@@ -22,11 +28,19 @@ body {
 header {
   width: 100%;
   height: 60px;
-  background: #FFF;
+  background: #000000;
   position: fixed;
   top: -60px;
   opacity: 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+#linkuri{
+  height: 60px;
+  float: right;
+  width: 80%;
+  justify-content: space-around;
+  display: flex;
 }
 
 span {
