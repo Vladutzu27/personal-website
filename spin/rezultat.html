@@ -1,0 +1,51 @@
+<html>
+    <head>
+
+<style>
+    #logo
+        {
+            width: 90%;
+            margin: auto;
+            display: block;
+        }
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        font-size: 120px;
+        margin: none;
+    }
+    #rezultat
+    {
+        font-size: 40px;
+    }
+</style>
+    </head>
+    <body onload="bagaMare();">
+        <div class="centered">
+            <img src="logo.png" id="logo" alt="spin pizza logo">
+            <hr id="orez">
+        </div>    
+        <h1>Pizza ta:</h1>
+        <p id="rezultat"></p>
+        <center>
+        <a id="spin" href="rezultat.html">
+            Bun, comandă!
+        </a>
+    </center>
+    </body>
+    <script>
+        var rezultat = document.getElementById('rezultat')
+        
+        function bagaMare()
+        {
+            const blaturi = ["Integral", "Alb", "Cu maia", "De cozonac", "Covrig"];
+            const grosSauSubtire = ["gros", "subțire"];
+            const branzeturi = ["Mozzarella", "Gouda", "Telemea dulce", "Telemea sărată", "Caș", "Cașcaval", "Mozzarella + Parmezan", "Brie", "Gorgonzola"];
+            const sosugi = ["De tomate", "De tomate iute", "Pesto", "Sriracha", "Sweet Chili", "Alb", "Gem de căpșuni", "Miere", "Barbeque"];
+            const toppinguri = ["rucola", "busuioc", "pepperoni", "ardei verde", "ardei roșu", "jalapeño", "habanero", "ananas", "cartofi prajiti", "ceafa de porc", "ceapa", "porumb", "mazăre", "vita", "broccoli", "slănină", "sorici (sezonieri)", "măsline", "ciuperci", "ouă", "roșii", "conopida", "pui", "pere", "bacon"];
+        
+            rezultat.innerHTML = `Tip de blat: ${blaturi[Math.floor(Math.random() * blaturi.length)]}, ${grosSauSubtire[Math.floor(Math.random() * grosSauSubtire.length)]}<br> Brânză: ${branzeturi[Math.floor(Math.random() * branzeturi.length)]}. <br> Sosul: ${sosugi[Math.floor(Math.random() * sosugi.length)]} <br> Topping-uri: ${toppinguri[Math.floor(Math.random() * toppinguri.length)]}, ${toppinguri[Math.floor(Math.random() * toppinguri.length)]}, ${toppinguri[Math.floor(Math.random() * toppinguri.length)]}, ${toppinguri[Math.floor(Math.random() * toppinguri.length)]}.`
+        }
+        </script>
+</html>
