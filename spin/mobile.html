@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <style>
+            *{
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none;
+            }
+            #header
+            {
+                background-color: #ff4000;
+                justify-content: center;
+            }
+            #logo
+            {
+                width: 90%;
+                margin: auto;
+            }
+            #spinning
+            {
+                transition: transform .7s ease-in-out;
+                width: 80%;
+            }
+            #spinning:hover
+            {
+                transform: rotate(360deg);
+            }
+            .optiune
+            {
+                border-radius: 20px;
+                border: solid 1px #bbbbbb;
+                width: 90%;
+                display: inline-block;
+                margin-top: 20px;
+            }
+            #optiuni
+            {
+                margin-top: 40px;
+            }
+            .taglines
+            {
+                color: black;
+                font-size: 90px
+            }
+            #mambojambisme
+            {
+                text-align: center;
+                color: #333333;
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <img id="logo" src="alb.png" alt="logo spin pizza">
+        </div>
+            <center>
+                <div id="optiuni">
+                    <a href="spin.html"><div class="optiune">
+                        <center>
+                            <h1 class="taglines">Pizza Random</h1>
+                            <img id="spinning" src="iconizza.png" alt="iconizza">
+                        </center>
+                    </a>
+                    </div>
+                    <div class="optiune">
+                    <a href="alege.html"><div class="optiune">
+                        <center>
+                            <h1 class="taglines">Alege-ți ingredientele</h1>
+                            <img id="spinning" src="custom.png" alt="iconizza">
+                        </center>
+                    </a>
+                    </div>
+                </div>
+            </center>
+            <div id="mambojambisme">
+                <p>© Copyright 2024 Spin Pizza is a trademark of Ghiocel Software Ltd. All rights reserved</p>
+            </div>
+    </body>
+</html>
