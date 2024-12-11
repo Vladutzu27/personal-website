@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="iconizza.png">
+        <title>Alege-ți ingredientele</title>
+        <style>
+            *{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #header
+            {
+                background-color: #ff4000;
+                justify-content: center;
+            }
+            #logo
+            {
+                width: 30%;
+                margin: auto;
+            }
+            h1 {
+            color: #ff4000;
+            border-bottom: 2px solid #ff4000;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        select {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #toppinguri {
+            height: 200px;
+        }
+
+        select:focus {
+            border-color: #d35400;
+            outline: none;
+            box-shadow: 0 0 5px rgba(211, 84, 0, 0.5);
+        }
+
+        @media (max-width: 900px) {
+            select {
+                font-size: 34px;
+            }
+            #logo
+            {
+                width: 90%;
+            }
+        }
+        #spin
+            {
+                padding-left: 70px;
+                padding-right: 70px;
+                border-radius: 130px;
+                background-color: ff4000;
+                text-decoration: none;
+                color: white;
+                font-weight: 700;
+                font-size: 70px;
+                margin-down: 100px;
+                margin-top: 200px;
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <img id="logo" src="alb.png" alt="logo spin pizza">
+        </div>
+        <h1>Brânză</h1>
+    <select name="branza" id="branza">
+        <option value="mozzarella">Mozzarella</option>
+        <option value="gouda">Gouda</option>
+        <option value="telemea-dulce">Telemea dulce</option>
+        <option value="telemea-sarata">Telemea sărată</option>
+        <option value="cas">Caș</option>
+        <option value="cascaval">Cașcaval</option>
+        <option value="mozzarella-parmezan">Mozzarella + Parmezan</option>
+        <option value="brie">Brie</option>
+        <option value="gorgonzola">Gorgonzola</option>
+    </select>
+
+    <h1>Blat</h1>
+    <select name="blat" id="blat">
+        <option value="integral">Integral</option>
+        <option value="alb">Alb</option>
+        <option value="cu-maia">Cu maia</option>
+        <option value="de-cozonac">De cozonac</option>
+        <option value="covrig">Covrig</option>
+    </select>
+    <br>
+    <label for="grosime">Grosime:</label>
+    <select name="grosime" id="grosime">
+        <option value="subtire">Subțire</option>
+        <option value="gros">Gros</option>
+    </select>
+
+    <h1>Sos</h1>
+    <select name="sos" id="sos">
+        <option value="de-tomate">De tomate</option>
+        <option value="de-tomate-iute">De tomate iute</option>
+        <option value="pesto">Pesto</option>
+        <option value="sriracha">Sriracha</option>
+        <option value="sweet-chili">Sweet Chili</option>
+        <option value="alb">Alb</option>
+        <option value="gem-capsuni">Gem de căpșuni</option>
+        <option value="miere">Miere</option>
+        <option value="barbeque">Barbeque</option>
+    </select>
+
+    <h1>Topping-uri</h1>
+    <select name="toppinguri" id="toppinguri" multiple>
+        <option value="rucola">Rucola</option>
+        <option value="busuioc">Busuioc</option>
+        <option value="pepperoni">Pepperoni</option>
+        <option value="ardei-verde">Ardei verde</option>
+        <option value="ardei-rosu">Ardei roșu</option>
+        <option value="jalapeno">Jalapeño</option>
+        <option value="habanero">Habanero</option>
+        <option value="ananas">Ananas</option>
+        <option value="cartofi-prajiti">Cartofi prăjiți</option>
+        <option value="ceafa-de-porc">Ceafă de porc</option>
+        <option value="ceapa">Ceapă</option>
+        <option value="porumb">Porumb</option>
+        <option value="mazare">Mazăre</option>
+        <option value="vita">Vită</option>
+        <option value="broccoli">Broccoli</option>
+        <option value="slanina">Slănină</option>
+        <option value="sorici">Șorici (sezonieri)</option>
+        <option value="masline">Măsline</option>
+        <option value="ciuperci">Ciuperci</option>
+        <option value="oua">Ouă</option>
+        <option value="rosii">Roșii</option>
+        <option value="conopida">Conopidă</option>
+        <option value="pui">Pui</option>
+        <option value="pere">Pere</option>
+        <option value="bacon">Bacon</option>
+    </select>
+    <br>
+        <a id="spin" href="rezultat.html">
+            Spin!
+        </a>
+    </body>
+</html>
