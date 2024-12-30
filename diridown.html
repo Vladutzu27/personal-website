@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title>DiriDown</title>
+        <link rel="icon" href="diridown.png" type="image/png">
+        <link rel="stylesheet" href="diridown.css">
+    </head>
+    <body id="body">
+        <div id="diridamp"></div>
+        <script src="https://unpkg.com/webamp"></script>
+        <script>
+            const app = document.getElementById("diridamp")
+            const webamp = new Webamp({initialSkin: {url: 'winamp/skin.wsz'}});
+        </script>
+        <div id="logosilinie">
+            <img src="diridown logo.png" id="logo" alt="diridown">
+            <hr id="linieorizontala">
+        </div>
+        <img src="diridown.png" id="icon" alt="diridown">
+        <select name="file" id="filefile" class="filebutton" onchange="actionfile(this.value)">
+            <option>File</option>
+            <option value="ul-md">Încarcă Markdown</option>
+            <option value="dl-md">Descarcă Markdown</option>
+            <option value="dl-html">Descarcă HTML</option>
+            <option value="cookie">Salvează în Cookie</option>
+        </select>
+        <select name="edit" id="fileedit" class="filebutton" onchange="actionfile(this.value)">
+            <option>Edit</option>
+            <option value="imgur">Imgur</option>
+            <option value="winamp">Winamp</option>
+            <option value="css">Elemente tematice</option>
+        </select>
+        <select name="view" id="fileview" class="filebutton" onchange="actionfile(this.value)">
+            <option>View</option>
+            <option value="colortheme">Themes</option>
+            <option value="compact">Toggle compact mode</option>
+        </select>
+        <button id="butonview"></button>
+        <hr id="linieorizontala">
+        <div id="tematica">
+            <select class="filebutton" name="marimefont" id="fontsize">
+                <option value="8px">8px</option>
+                <option value="10px">10px</option>
+                <option value="12px">12px</option>
+                <option value="14px">14px</option>
+                <option value="16px">16px</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+                <option value="22px">22px</option>
+                <option value="24px">24px</option>
+                <option value="26px">26px</option>
+                <option value="28px">28px</option>
+                <option value="30px">30px</option>
+                <option value="32px">32px</option>
+                <option value="34px">34px</option>
+                <option value="36px">36px</option>
+                <option value="38px">38px</option>
+                <option value="40px">40px</option>
+            </select>
+            <select class="filebutton" name="familiefont" id="fontfamily">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Comic Sans MS">Comic Sans</option>
+                <option value="Impact">Impact</option>
+                <option value="Lucida Console">Lucida Console</option>
+                <option value="Lucida Sans Unicode">Lucida Sans</option>
+                <option value="Palatino Linotype">Palatino Linotype</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Calibri">Calibri</option>
+            </select>
+            culoare text
+            <input class="colorpicker" type="color" name="culoareforegroundcss" id="foregroundcolorcss">
+             | culoare fundal
+            <input class="colorpicker" type="color" name="culoarebackgroundcss" id="backgroundcolorcss">
+            <button class="icsi" onclick="inchide(this.id)" id="ics-tematica">x</button>
+            <hr id="linieorizontala">
+        </div>
+        <div id="colortheme">
+            <select id="themeselector" class="filebutton" name="" onchange="changetheme(this.value)" id="">
+                <option value="colortheme">Color theme</option>
+                <option value="default">Default</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+            <select class="filebutton" onchange="changethemefont(id, this.value)" name="marimefont" id="size">
+                <option value="8px">8px</option>
+                <option value="10px">10px</option>
+                <option value="12px">12px</option>
+                <option value="14px">14px</option>
+                <option value="16px">16px</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+                <option value="22px">22px</option>
+                <option value="24px">24px</option>
+                <option value="26px">26px</option>
+                <option value="28px">28px</option>
+                <option value="30px">30px</option>
+                <option value="32px">32px</option>
+                <option value="34px">34px</option>
+                <option value="36px">36px</option>
+                <option value="38px">38px</option>
+                <option value="40px">40px</option>
+            </select>
+            <select class="filebutton" onchange="changethemefont(id, this.value)" name="familiefont" id="family">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Comic Sans MS">Comic Sans</option>
+                <option value="Impact">Impact</option>
+                <option value="Lucida Console">Lucida Console</option>
+                <option value="Lucida Sans Unicode">Lucida Sans</option>
+                <option value="Palatino Linotype">Palatino Linotype</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Calibri">Calibri</option>
+            </select>
+            <button class="icsi" onclick="inchide(this.id)" id="ics-colortheme">x</button>
+        </div>
+        <div id="editorsiindicator">
+            <div id="indicatoare">
+                <p class="indicator" id="indicator1">|</p>
+                <p class="indicator" id="indicator2">|</p>
+                <p class="indicator" id="indicator3">|</p>
+                <p class="indicator" id="indicator4">|</p>
+                <p class="indicator" id="indicator5">|</p>
+                <p class="indicator" id="indicator6">|</p>
+                <p class="indicator" id="indicator7">|</p>
+                <p class="indicator" id="indicator8">|</p>
+                <p class="indicator" id="indicator9">|</p>
+                <p class="indicator" id="indicator10">|</p>
+                <p class="indicator" id="indicator11">|</p>
+                <p class="indicator" id="indicator12">|</p>
+                <p class="indicator" id="indicator13">|</p>
+                <p class="indicator" id="indicator14">|</p>
+                <p class="indicator" id="indicator15">|</p>
+                <p class="indicator" id="indicator16">|</p>
+                <p class="indicator" id="indicator17">|</p>
+                <p class="indicator" id="indicator18">|</p>
+                <p class="indicator" id="indicator19">|</p>
+                <p class="indicator" id="indicator20">|</p>
+                <p class="indicator" id="indicator21">|</p>
+                <p class="indicator" id="indicator22">|</p>
+                <p class="indicator" id="indicator23">|</p>
+            </div>
+            <textarea id="input" placeholder="Introdu textul aici..."></textarea>
+        </div>
+
+        <script src="diridown main.js"></script>
+    </body>
+</html>

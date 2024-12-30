@@ -1,0 +1,103 @@
+.filebutton
+{
+    color: #7aff5f;
+    background-color: #130f33;
+    border-right: #7aff5f 4px solid;
+    border-bottom: #7aff5f 4px solid;
+    border-top: none;
+    border-left: none;
+    width: 100px;
+    appearance: none;
+}
+#input
+{
+    background-color: #130f33;
+    color: #7aff5f;
+    border: #7aff5f 1px solid;
+    width: 99%;
+    height: 5000px;
+    padding-top: 0;
+    vertical-align: top;
+    font-size: 16px;
+    font-family: "Arial";
+}
+#icon
+{
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+    position: absolute;
+    margin-right: 20px;
+}
+body
+{
+    background-color: #130f33;
+    color: #7aff5f;
+    font-family: "Courier New", monospace;
+    text-align: left;
+}
+#linieorizontala
+{
+    border-color: #7aff5f;
+    width: 99%;
+}
+#input:focus, select:focus {
+    outline: none;
+}
+#logo
+{
+    width: 256px;
+    background-image: url('diridown logo.png');
+}
+#logo:hover
+{
+    background-image: url('diridown filled.png');
+}
+#butonview
+{
+    height: 12px;
+    width: 12px;
+    background-color: transparent;
+    border: none;
+    background-image: url('stanga view.png');
+}
+.colorpicker
+{
+    color: #7aff5f;
+    background-color: #130f33;
+    border: none;
+    width: 27px;
+    appearance: none;
+    padding: none;
+}
+a
+{
+    color: #7aff5f;
+}
+.nedecorat
+{
+    text-decoration: none;
+}
+.icsi
+{
+    color: #7aff5f;
+    background-color: #130f33;
+    border-right: #7aff5f 4px solid;
+    border-bottom: #7aff5f 4px solid;
+    border-top: none;
+    border-left: none;
+    width: 27px;
+    appearance: none;
+}
+#editorsiindicator
+{
+    display: flex;
+}
+.indicator
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Arial";
+    font-size: 16px;
+    color: #130f33;
+}
