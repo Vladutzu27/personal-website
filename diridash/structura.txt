@@ -1,0 +1,16 @@
+diridisk exemplu 
+col 000000$00ff00
+
+fold stracur
+$b
+file exem.txt
+$b
+acesta este un\nexemplu
+$e
+fold folderas
+$b
+file exemplu.c
+$b
+#include <stdio.h>\nint main() {\n   // printf() displays the string inside quotation\n   printf("Hello, World!");\n   return 0;\n}
+$e
+$e

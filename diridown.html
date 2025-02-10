@@ -9,7 +9,7 @@
         <script src="https://unpkg.com/webamp"></script>
         <script>
             const app = document.getElementById("diridamp")
-            const webamp = new Webamp({initialSkin: {url: 'winamp/skin.wsz'}});
+            const webamp = new Webamp({availableSkins: [{ url: "winamp/skin.wsz", name: "Diridamp" }],initialSkin: {url: 'winamp/skin.wsz'}}, );
         </script>
         <div id="logosilinie">
             <img src="diridown logo.png" id="logo" alt="diridown">
