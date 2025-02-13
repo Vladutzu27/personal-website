@@ -1,15 +1,18 @@
 const terminal = document.getElementById("terminal");
 const inputField = document.getElementById("input");
+const editor = document.getElementById("editor");
 
 var culori = ["aliceblue","antiquewhite","aqua","aquamarine","azure","beige","bisque","black","blanchedalmond","blue","blueviolet","brown","burlywood","cadetblue","chartreuse","chocolate","coral","cornflowerblue","cornsilk","crimson","cyan","darkblue","darkcyan","darkgoldenrod","darkgray","darkgrey","darkgreen","darkkhaki","darkmagenta","darkolivegreen","darkorange","darkorchid","darkred","darksalmon","darkseagreen","darkslateblue","darkslategray","darkslategrey","darkturquoise","darkviolet","deeppink","deepskyblue","dimgray","dimgrey","dodgerblue","firebrick","floralwhite","forestgreen","fuchsia","gainsboro","ghostwhite","gold","goldenrod","gray","grey","green","greenyellow","honeydew","hotpink","indianred","indigo","ivory","khaki","lavender","lavenderblush","lawngreen","lemonchiffon","lightblue","lightcoral","lightcyan","lightgoldenrodyellow","lightgray","lightgrey","lightgreen","lightpink","lightsalmon","lightseagreen","lightskyblue","lightslategray","lightslategrey","lightsteelblue","lightyellow","lime","limegreen","linen","magenta","maroon","mediumaquamarine","mediumblue","mediumorchid","mediumpurple","mediumseagreen","mediumslateblue","mediumspringgreen","mediumturquoise","mediumvioletred","midnightblue","mintcream","mistyrose","moccasin","navajowhite","navy","oldlace","olive","olivedrab","orange","orangered","orchid","palegoldenrod","palegreen","paleturquoise","palevioletred","papayawhip","peachpuff","peru","pink","plum","powderblue","purple","rebeccapurple","red","rosybrown","royalblue","saddlebrown","salmon","sandybrown","seagreen","seashell","sienna","silver","skyblue","slateblue","slategray","slategrey","snow","springgreen","steelblue","tan","teal","thistle","tomato","turquoise","violet","wheat","white","whitesmoke","yellow","yellowgreen"]
 
 var rendered = false;
+var editorOn = false;
 var terminat = document.getElementById("terminal");
+var UltimaComanda = "";
 
 const app = document.getElementById("webamp-app")
 const webamp = new Webamp();
 
-var PWD = "stracur"
+var PWD = "stracur";
 
 window.mobileCheck = function() {
     let check = false;
@@ -18,6 +21,7 @@ window.mobileCheck = function() {
   };
 
 function doThisWithTheInput(input) {
+    UltimaComanda = input;
     if(input.split(" ")[0] == "help" || input.split(" ")[0] == "ajutor")
     {
         return "Aici ai lista cu comenzi:\nhelp - afiseaza aceasta lista\najutor - afiseaza aceasta lista";
@@ -34,7 +38,7 @@ function doThisWithTheInput(input) {
     }
     else if(input.split(" ")[0] == "detalii" || input.split(" ")[0] == "neofetch")
     {
-        return `${input.split(" ")[0] == "neofetch" ? `! Această comandă nu este chiar neofetch, comanda pentru ea este „detalii” dar merge și „neofetch” pentru familiaritate \n\n` : ``}                  Ora - ${new Date().toLocaleString()}\n     888          Platformă - ${navigator.appName} <- probabil greșit\n     888          RAM dispoinbil - ${navigator.deviceMemory}\n .d88888          Nuclee - ${navigator.hardwareConcurrency}\nd88" 888          Culori - ${window.screen.colorDepth }\nd88" 888  888888  Rezoluție - ${window.screen.width} x ${window.screen.height}\nY88b 888          Browser - ${navigator.appVersion}\n "Y88888          Limbă - ${navigator.language}\n                  E pe telefon? - ${mobileCheck() ? "da":"nu"}`
+        return `${input.split(" ")[0] == "neofetch" ? `! Această comandă nu este chiar neofetch, comanda pentru ea este „detalii” dar merge și „neofetch” pentru familiaritate \n\n` : ``}          ====              Ora - ${new Date().toLocaleString()}\n          ====              Platformă - ${navigator.appName} <- probabil greșit\n    ===========             RAM dispoinbil - ${navigator.deviceMemory}\n ====   =======             Nuclee - ${navigator.hardwareConcurrency}\n=====    ======= ========   Culori - ${window.screen.colorDepth }\n=========================   Rezoluție - ${window.screen.width} x ${window.screen.height}\n=================           Browser - ${navigator.appVersion}\n ================           Limbă - ${navigator.language}\n   ============             E pe telefon? - ${mobileCheck() ? "da":"nu"}`
     }
     else if(input.split(" ")[0] == "webamp")
     {
@@ -80,11 +84,33 @@ function doThisWithTheInput(input) {
             return `Număr invalid de argumente - ${input.split(" ").length}. ${input.split(" ")[0]} necesită 3 argumente. Pentru mai multe detalii scrie „help ${input.split(" ")[0]}”.`
         }
         else
+        {
         
             terminat.style.backgroundColor = `${culori.includes(input.split[1]) ? `` : `#`}${input.split(" ")[1].replace("#", "")}`;
             terminat.style.color = `${culori.includes(input.split[2]) ? `` : `#`}${input.split(" ")[2].replace("#", "")}`;
             terminat.style.borderColor = `${culori.includes(input.split[2]) ? `` : `#`}${input.split(" ")[2].replace("#", "")}`;
-        
+        }
+    }
+    else if(input.split(" ")[0] == "editor")
+    {
+        editorOn ? editor.style.display = "none" : editor.style.display = "inline";
+        editorOn = !editorOn;
+    }
+    else if(input.split(" ")[0] == "echo")
+    {
+        return schimba(input).split(" ").slice(0, 0).concat(schimba(input).split(" ").slice(1)).join(" ");
+    }
+    else if(input.split(" ")[0] == "literemari")
+    {
+        return schimba(input).split(" ").slice(0, 0).concat(schimba(input).split(" ").slice(1)).join(" ").toUpperCase();
+    }
+    else if(input.split(" ")[0] == "literemici")
+    {
+        return schimba(input).split(" ").slice(0, 0).concat(schimba(input).split(" ").slice(1)).join(" ").toLowerCase();
+    }
+    else if(input.split(" ")[0] == "tradu")
+    {
+        return input.includes(" in ") ? tradu(schimba(input).split(" ").slice(0, 0).concat(schimba(input).split(" ").slice(1)).join(" ").split(" in ")[0], schimba(input).split(" ").slice(0, 0).concat(schimba(input).split(" ").slice(1)).join(" ").split(" in ")[1]) : "Sintaxă greșită. Pentru detalii rulează „ajutor tradu”.";
     }
     else
     {
@@ -100,6 +126,24 @@ function output(text) {
 
 }
 
+function schimba(text)
+{
+    return text.replace(/\$\((.*?)\)/g, (_, match) => doThisWithTheInput(match));
+}
+
+async function tradu(text, targetLang) {
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data[0].map(item => item[0]).join(""); // Extract translated text
+    } catch (error) {
+        console.error("Translation error:", error);
+        return "Nu a vrut - " + error;
+    }
+}
+
 inputField.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         const input = inputField.value;
@@ -107,5 +151,10 @@ inputField.addEventListener("keydown", function(event) {
         const response = doThisWithTheInput(input);
         output(response);
         inputField.value = "";
+    }
+    else if(event.key === "ArrowUp")
+    {
+        inputField.value = UltimaComanda;
+        console.log("sagsus")
     }
 });

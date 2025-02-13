@@ -6,6 +6,10 @@
     <title>diridaSH</title>
     <link rel="icon" href="favi.png">
     <style>
+        #editor {
+            display: none;
+            width: 400px;
+        }
         body {
             background-color: black;
             color: limegreen;
@@ -31,12 +35,18 @@
             outline: none;
             width: 100%;
         }
+        #terminalsieditor {
+            display: flex;
+        }
     </style>
 </head>
 <body>
     <div id="webamp-app"></div>
     <script src="https://unpkg.com/webamp"></script>
-    <div id="terminal"></div>
+    <div id="terminalsieditor">
+        <div id="terminal"></div>
+        <textarea id="editor"></textarea>
+    </div>
     <div id="input-line">
         <span>d- </span><input id="input" autofocus>
     </div>
