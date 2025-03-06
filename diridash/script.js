@@ -112,6 +112,10 @@ function doThisWithTheInput(input) {
     {
         return input.includes(" in ") ? tradu(schimba(input).split(" ").slice(0, 0).concat(schimba(input).split(" ").slice(1)).join(" ").split(" in ")[0], schimba(input).split(" ").slice(0, 0).concat(schimba(input).split(" ").slice(1)).join(" ").split(" in ")[1]) : "Sintaxă greșită. Pentru detalii rulează „ajutor tradu”.";
     }
+    else if(input.split(" ")[0] == "antante" || "alabala")
+    {
+        return schimba(input).split(" ").slice(0, 0).concat(schimba(input).split(" ").slice(1)).join(" ").split(" ")[Math.floor(Math.random() * schimba(input).split(" ").slice(0, 0).concat(schimba(input).split(" ").slice(1)).join(" ").split(" ").length)];
+    }
     else
     {
         return `Comandă necunoscută - ${input.split(" ")[0]}`;
@@ -126,10 +130,13 @@ function output(text) {
 
 }
 
-function schimba(text)
-{
-    return text.replace(/\$\((.*?)\)/g, (_, match) => doThisWithTheInput(match));
+function schimba(text) {
+    while (text.includes("$(")) {
+        text = text.replace(/\$\((.*?)\)/g, (_, match) => doThisWithTheInput(match));
+    }
+    return text;
 }
+
 
 async function tradu(text, targetLang) {
     const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`;

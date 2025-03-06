@@ -1,0 +1,68 @@
+{
+  "q1": {
+    "q": "Ce animal ar fi cel mai greu de ținut ca animal de companie?",
+    "a1": "Elefant$30",
+    "a2": "Leu$25",
+    "a3": "Crocodil$15",
+    "a4": "Șarpe$10",
+    "a5": "Urs$10",
+    "a6": "Cangur$5",
+    "a7": "",
+    "a8": ""
+  },
+  "q2": {
+    "q": "Ce ai lua cu tine pe o insulă pustie?",
+    "a1": "Cuțit$35",
+    "a2": "Chibrituri$20",
+    "a3": "Apă$15",
+    "a4": "Carte$10",
+    "a5": "Lanternă$10",
+    "a6": "Frânghie$10",
+    "a7": "",
+    "a8": ""
+  },
+  "q3": {
+    "q": "Ce fel de mâncare comandă lumea cel mai des la restaurant?",
+    "a1": "Pizza$40",
+    "a2": "Burger$25",
+    "a3": "Paste$15",
+    "a4": "Shaorma$10",
+    "a5": "Salată$5",
+    "a6": "Friptură$5",
+    "a7": "",
+    "a8": ""
+  },
+  "q4": {
+    "q": "Ce obiect ai vrea să dispară din lume?",
+    "a1": "Țânțari$35",
+    "a2": "Facturi$30",
+    "a3": "Alarme de dimineață$15",
+    "a4": "Poluare$10",
+    "a5": "Homework$5",
+    "a6": "Reclame enervante$5",
+    "a7": "",
+    "a8": ""
+  },
+  "q5": {
+    "q": "Ce ai face prima oară dacă ai deveni milionar peste noapte?",
+    "a1": "Casă nouă$30",
+    "a2": "Mașină scumpă$20",
+    "a3": "Vacanță exotică$20",
+    "a4": "Donație$15",
+    "a5": "Investiție$10",
+    "a6": "Petrecere$5",
+    "a7": "",
+    "a8": ""
+  },
+  "q6": {
+    "q": "Ce te enervează cel mai mult la trafic?",
+    "a1": "Aglomerația$35",
+    "a2": "Șoferii care claxonează$25",
+    "a3": "Semaforul prea lung$15",
+    "a4": "Parcările lipsă$10",
+    "a5": "Pietonii neatenți$10",
+    "a6": "Prețul benzinei$5",
+    "a7": "",
+    "a8": ""
+  }
+}
