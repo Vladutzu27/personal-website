@@ -17,3 +17,5 @@
 
 /csre/:levelname /csre/:levelname.html 200
 /csre/:levelname.json /csre/data/:levelname.json 200
+
+/numerge https://ia-ma.de/pula
