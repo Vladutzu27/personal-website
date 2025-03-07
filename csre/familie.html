@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>CSRE - Selectare nume familie</title>
+        <style>
+            *{
+                font-family: sans-serif;
+            }
+            body{
+                background: linear-gradient(#0d0d0d, #00012b);
+            }
+            img{
+                width: 500px;
+                border-radius: 10px;
+            }
+            input{
+                background-color: azure;
+                width: 50%;
+                height: 100px;
+                border-radius: 20px;
+                font-size: 72px;
+            }
+            p{
+                color: white;
+            }
+            button{
+                width: 300px;
+                height: 100px;
+                font-size: 50px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <img src="familie-exemplu.png" alt="image">
+        
+            <p>
+                Aici puteți gennera un nume de familie care să fie afișat pe un ecran, în cazul în care vreți un ecran sau o foaie cu numele de familie.
+            </p>
+            <input id="box" placeholder="" type="text">
+            <br>
+        <script>
+            var nume = ["Gigescu", "Popescu", "Puțulescu", "Ionescu", "Paraschivescu", "McLovin", "Becali", "Mărgineanu", "Numescu", "Exemplescu"];
+            box = document.getElementById("box");
+            box.placeholder = nume[Math.floor(Math.random()*nume.length)];
+            function genereaza()
+            {
+                window.location.href = "http://ghiocel-games.com/nume?nume=" + box.value;
+            }
+        </script>
+        <button onclick="genereaza()">Generează!</button>
+    </center>
+    </body>
+</html>

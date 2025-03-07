@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>CSRE - Display nume</title>
+  <style>
+    body{
+        background-image: url("csrefamilie.png");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        background: linear-gradient(#81e8f3, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    h1 {
+      font-size: clamp(6rem, 12vw, 20rem);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      max-width: 100%;
+      white-space: nowrap;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    window.onload = function() {
+      var word = getParameterByName('nume');
+
+      var titlunume = document.getElementById('numele');
+      titlunume.innerHTML = word.toUpperCase();
+
+      const textLength = titlunume.textContent.length;
+      const fontSize = 400 / textLength;
+      fontSize = Math.min(fontSize, 400);
+      titlunume.style.fontSize = `${fontSize}vw`;
+    };
+  </script>
+</head>
+<body>
+    
+  <h1 id="numele">Se încarcă...</h1>
+</body>
+</html>
