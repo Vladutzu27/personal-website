@@ -15,7 +15,6 @@
 /buia https://open.spotify.com/playlist/7EwDBCHfFwycIpubuADlhe?si=Hs4GSqPgQ_KGIOJ1kz0Ngg&pi=e-C8Yw9Kn4S3C6
 /pulapula https://open.spotify.com/track/1tEa79mHpAZOQXWbliZixK?si=6UNVRWceQSCeuFziX2-u7Q
 
-/csre/:levelname /csre/:levelname.html 200
-/csre/:levelname.json /csre/data/:levelname.json 200
+/csre/*  /csre/data/:splat.json 200
 
 /numerge https://ia-ma.de/pula
