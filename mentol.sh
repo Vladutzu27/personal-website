@@ -52,3 +52,16 @@ install_pkg "Steam" "steam"
 install_pkg "Wine (și toate componentele necesare)" "wine winetricks"
 
 sudo apt install sl cmatrix lolcat figlet neofetch
+
+wget 'https://github.com/ful1e5/apple_cursor/releases/download/v2.0.1/macOS.tar.xz'
+
+tar -xvf macOS.tar.gz
+mv macOS* ~/.icons/
+sudo mv macOS* /usr/share/icons/
+
+gsettings set org.cinnamon.desktop.interface cursor-theme "macOS"
+
+wget ""
+wget -O "$HOME/Desktop/desktop.png" "https://dirid.am/desktop.png"
+
+gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Desktop/desktop.png"
