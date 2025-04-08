@@ -1,5 +1,7 @@
 #!/bin/bash
- 
+clear
+echo $'    dMMMMMP dMMMMb  dMMMMMP .aMMMb  dMP dMP      .dMMMb  dMP dMP \n   dMP     dMP.dMP dMP     dMP"VMP dMP dMP      dMP" VP dMP dMP  \n  dMMMP   dMMMMK" dMMMP   dMP     dMP dMP       VMMMb  dMMMMMP   \n dMP     dMP"AMF dMP     dMP.aMP dMP.aMP  amr dP .dMP dMP dMP    \ndMP     dMP dMP dMMMMMP  VMMMP"  VMMMP"  dMP  VMMMP" dMP dMP     '
+
 sudo apt update
  
 gsettings set org.cinnamon.muffin tile-maximize true
