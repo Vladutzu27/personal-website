@@ -7,7 +7,7 @@
       "a4": "Șemineului$8",
       "a5": "Televizorului$4",
       "a6": "Telefonului$3",
-      "a7": "",
+      "a7": "Al saptilea$1",
       "a8": ""
     },
     "q2": {
@@ -18,7 +18,7 @@
       "a4": "Bani$5",
       "a5": "Batistă$3",
       "a6": "Pix$2",
-      "a7": "",
+      "a7": "Pula$2",
       "a8": ""
     },
     "q3": {
@@ -40,7 +40,7 @@
       "a4": "Legume$10",
       "a5": "Carne$8",
       "a6": "Iaurt$7",
-      "a7": "",
+      "a7": "Sperma$2",
       "a8": ""
     },
     "q5": {
@@ -51,8 +51,8 @@
       "a4": "Ochelari de soare$10",
       "a5": "Pălărie$8",
       "a6": "Apă$7",
-      "a7": "",
-      "a8": ""
+      "a7": "Prezervative$5",
+      "a8": "Chiloti$3"
     }
   }
   
